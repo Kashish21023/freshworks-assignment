@@ -8,19 +8,19 @@ public class BR
  public void Insert( ) throws IOException
  {
    Scanner in = new Scanner (System.in);
-  System.out.println("Enter the Country_Name: ");
+  System.out.println("Enter Patients_Name : ");
 	String country_Name=in.next();
-	System.out.println("Enter the Country_capital: ");
+	System.out.println("Enter Patients_Address : ");
 	String country_capital=in.next();
-	System.out.println("Enter the region: ");
+	System.out.println("Enter Patients_Age : ");
 	char  region=in.nextInt();
-	System.out.println("Enter the language: ");
+	System.out.println("Enter Patients_Gender : ");
 	char language=in.nextInt();     
   JSONObject obj=new JSONObject(); 
-  obj.put("country_name",country_Name);    
-  obj.put("country_capital",country_capital);    
-  obj.put("region",region);
-  obj.put("language",language);
+  obj.put("Patients_Name",Patients_Name);    
+  obj.put("Patients_Address",Patients_Address);    
+  obj.put("Patients_Age",Patients_Age);
+  obj.put("Patients_Gender",Patients_Gender);
   PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("BR.txt",true)));
   pw.print(obj);
   System.out.println("Details added successfully.");
